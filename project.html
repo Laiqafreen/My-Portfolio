@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afreen Laiq - Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f8f8f8;
+    }
+    .sidebar {
+      width: 250px;
+      background: #0c0c0c;
+      color: #fff;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      height: 100vh;
+    }
+    .sidebar img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+   .sidebar .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar .social-icons img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1); /* Makes image white */
+  vertical-align: middle;
+}
+
+.sidebar .social-icons i {
+  color: white;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+    .sidebar nav {
+      margin-top: 30px;
+      width: 100%;
+    }
+    .sidebar nav a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 5px;
+      transition: background 0.3s;
+    }
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+      background: #1e1e1e;
+      border-radius: 5px;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 60px;
+      width: 100%;
+    }
+    .main-content h1 {
+      font-size: 40px;
+      color: #222;
+      margin-bottom: 20px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .project i {
+      margin-bottom: 10px;
+      display: block;
+      font-size: 28px;
+    }
+    .project h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .project p {
+      color: #555;
+      font-size: 14px;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #0c0c0c;
+      font-weight: bold;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
+    .action-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .action-buttons a button {
+      margin-left: 5px;
+      background: #eee;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background 0.3s;
+    }
+    .action-buttons a button:hover {
+      background: #ccc;
+    }
+    .action-buttons a button i {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img src="./Snapchat-241246882.jpg" alt="Profile" />
+    <h2>Afreen Laiq</h2>
+    <div class="social-icons">
+      <a href="https://leetcode.com/u/Laiq_Afreen/" target="_blank" title="LeetCode">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode">
+      </a>
+      <a href="https://www.codechef.com/users/long_wolf_41" target="_blank" title="CodeChef">
+        <img src="https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo.svg" alt="CodeChef">
+      </a>
+      <a href="https://www.hackerrank.com/profile/laiqafreen1209" target="_blank" title="HackerRank">
+        <img src="https://cdn.worldvectorlogo.com/logos/hackerrank.svg" alt="HackerRank">
+      </a>
+      <a href="https://github.com/Laiqafreen" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      <a href="https://www.linkedin.com/in/afreen-laiq-0236122b9/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&cc=laiqafreen1209@gmail.com" target="_blank" title="Send Email">
+  <i class="fas fa-envelope"></i>
+</a>
+
+        
+    </div>
+    <nav>
+      <a href="code.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="project.html" class="active">Project</a>
+      <a href="certificate.html">Certificate</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <h1>Projects</h1>
+
+    <div class="projects">
+
+      <div class="project">
+        <div class="action-buttons">
+          <a href="https://github.com/Laiqafreen/CODSOFT_taskno1-Quiz-Application-with-Timer" target="_blank" title="View on GitHub">
+            <button><i class="fab fa-github"></i></button>
+          </a>
+        </div>
+        <i class="fas fa-question-circle" style="color: #ff6f61;"></i>
+        <h3>Quiz Application</h3>
+        <p>Interactive quiz with a timer and instant score calculation.</p>
+      </div>
+
+      
+      <div class="project">
+        <div class="action-buttons">
+          <a href="https://github.com/Laiqafreen/CODSOFT_taskno2-Number-Game" target="_blank" title="View on GitHub">
+            <button><i class="fab fa-github"></i></button>
+          </a>
+        </div>
+        <i class="fas fa-gamepad" style="color: #6c63ff;"></i>
+        <h3>Number Game</h3>
+        <p>Guess a number between 1–100. Includes rounds, scoring, and feedback.</p>
+      </div>
+
+
+      <div class="project">
+        <div class="action-buttons">
+          <a href="https://github.com/Laiqafreen/CODSOFT_taskno3-Student-Grade-Calculator" target="_blank" title="View on GitHub">
+            <button><i class="fab fa-github"></i></button>
+          </a>
+        </div>
+        <i class="fas fa-calculator" style="color: #00b894;"></i>
+        <h3>Grade Calculator</h3>
+        <p>Enter subject marks to calculate average, percentage, and grade.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

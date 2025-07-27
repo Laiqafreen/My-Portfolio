@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certificates - Afreen Laiq</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f5f5f5;
+    }
+    .sidebar {
+      width: 250px;
+      background: #0c0c0c;
+      color: #fff;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      height: 100vh;
+    }
+    .sidebar img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .sidebar .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .sidebar .social-icons img {
+      width: 22px;
+      height: 22px;
+      filter: brightness(0) invert(1);
+      vertical-align: middle;
+    }
+    .sidebar .social-icons i {
+      color: white;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+    .sidebar nav {
+      margin-top: 30px;
+      width: 100%;
+    }
+    .sidebar nav a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 5px;
+      transition: background 0.3s;
+    }
+    .sidebar nav a:hover,
+    .sidebar nav a.active {
+      background: #1e1e1e;
+      border-radius: 5px;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 40px;
+      width: calc(100% - 250px);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .certificates-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .certificate-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .certificate-card:hover {
+      transform: scale(1.05);
+    }
+    .certificate-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .certificate-card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #222;
+    }
+    .certificate-card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    .certificate-card div {
+      padding: 10px 15px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="./Snapchat-241246882.jpg" alt="Profile" />
+    <h2>Afreen Laiq</h2>
+    <div class="social-icons">
+      <a href="https://leetcode.com/u/Laiq_Afreen/" target="_blank" title="LeetCode"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode"></a>
+      <a href="https://www.codechef.com/users/long_wolf_41" target="_blank" title="CodeChef"><img src="https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo.svg" alt="CodeChef"></a>
+      <a href="https://www.hackerrank.com/profile/laiqafreen1209" target="_blank" title="HackerRank"><img src="https://cdn.worldvectorlogo.com/logos/hackerrank.svg" alt="HackerRank"></a>
+      <a href="https://github.com/Laiqafreen" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/afreen-laiq-0236122b9/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+   <a href="https://mail.google.com/mail/?view=cm&fs=1&cc=laiqafreen1209@gmail.com" target="_blank" title="Send Email">
+  <i class="fas fa-envelope"></i>
+</a>
+
+    </div>
+    <nav>
+      <a href="code.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="project.html">Project</a>
+      <a href="certificate.html" class="active">Certificate</a>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Certificates</h1>
+    <div class="certificates-container">
+      <!-- Each card -->
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="hackerrank.png" alt="Java Basics" />
+        <div>
+          <h3>Java (Basics)</h3>
+          <p><strong>Issuer:</strong> HackerRank</p>
+          <p><strong>Date:</strong> 2025-07-12</p>
+          <p>Passed HackerRank skill certification test in Java Basics.</p>
+        </div>
+      </div>
+
+      <!-- Add more cards below as needed -->
+      <!-- Just like this one -->
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="deeplearning.png" alt="Deep Learning" />
+        <div>
+          <h3>Deep Learning Fundamentals</h3>
+          <p><strong>Issuer:</strong> Cognitive Classes</p>
+          <p><strong>Date:</strong> 2025-07-15</p>
+          <p>Completed & Passed a course on cognitiveclass.ai powered by IBM.</p>
+        </div>
+      </div>
+      
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="codesoft.png" alt="Internship" />
+        <div>
+          <h3>Java Programming Internship</h3>
+          <p><strong>Issuer:</strong> CodeSoft</p>
+          <p><strong>Date:</strong> 2025-05-13</p>
+          <p>Completed 4 weeks Virtual Internship Program in Java Programming.</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="sec.jpg" alt="Software Engineering" />
+        <div>
+          <h3>Software Engineering</h3>
+          <p><strong>Issuer:</strong> Saylor Academy</p>
+          <p><strong>Date:</strong> 2025-04-14</p>
+          <p>Certified in Software Engineering Fundamentals.</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="hfi.jpg" alt="Hack For Impact" />
+        <div>
+          <h3>Hack For Impact</h3>
+          <p><strong>Issuer:</strong> IIIT Delhi</p>
+          <p><strong>Date:</strong> 2025-02-20</p>
+          <p>Hackathon Runner Up at E-summit IIIT Delhi.</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="power bi.jpeg" alt="Power BI" />
+        <div>
+          <h3>Power BI</h3>
+          <p><strong>Issuer:</strong> IMSEC</p>
+          <p><strong>Date:</strong> 2024-10-08</p>
+          <p>Completion of 30 hours of training on Power BI.</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="nvidia.jpeg" alt="Deep Learning NVIDIA" />
+        <div>
+          <h3>Deep Learning</h3>
+          <p><strong>Issuer:</strong> NVIDIA</p>
+          <p><strong>Date:</strong> 2024-07-01</p>
+          <p>Completion of Workshop/Fundamentals of Deep Learning.</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="wec.jpg" alt="Web Development" />
+        <div>
+          <h3>Web Development Certification</h3>
+          <p><strong>Issuer:</strong> CETPA</p>
+          <p><strong>Date:</strong> 2024-01-29</p>
+          <p>Completed 6 weeks training on Web Development using React Js.</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="coordinator.jpeg" alt="Coordinator" />
+        <div>
+          <h3>Discipline Coordinator </h3>
+          <p><strong>Issuer:</strong>IMSEC</p>
+          <p><strong>Date:</strong> 2023-11-08 </p>
+          <p>Appreciation Certificate for Coordinating Prarambh Event at IMSEC</p>
+        </div>
+      </div>
+      
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="java programming.jpeg" alt="Java Programming GL" />
+        <div>
+          <h3>Java Programming</h3>
+          <p><strong>Issuer:</strong> Great Learning</p>
+          <p><strong>Date:</strong> September 2022</p>
+          <p>Completed an online java programming course.</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="Biology.jpeg" alt="biology" />
+        <div>
+          <h3>Science,Arts & Humanities Exhibition</h3>
+          <p><strong>Issuer:</strong>St John's School</p>
+          <p><strong>Date:</strong>2018-12-07</p>
+          <p>Participated for Biology subject in the Exhibition..</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="drawing1.jpeg" alt="drawing" />
+        <div>
+          <h3>Cartoon Making Competition</h3>
+          <p><strong>Issuer:</strong> St John's School</p>
+          <p><strong>Date:</strong>2018-11-17</p>
+          <p>Adjudged Third in the competition</p>
+        </div>
+      </div>
+
+      <div class="certificate-card" onclick="openModal(this)">
+        <img src="drawing.jpeg" alt="drawing" />
+        <div>
+          <h3>Drawing Competition</h3>
+          <p><strong>Issuer:</strong>Student Development Society </p>
+          <p><strong>Date:</strong> 2015-8-20</p>
+          <p>Certicate of Participation in a Drawing Competition.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <button class="close-btn" onclick="closeModal()">×</button>
+    <img id="modal-img" src="" alt="Zoomed Certificate">
+  </div>
+
+  <script>
+    function openModal(card) {
+      const imgSrc = card.querySelector("img").src;
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modalImg.src = imgSrc;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
